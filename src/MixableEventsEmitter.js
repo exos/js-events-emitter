@@ -212,6 +212,8 @@ define(function () {
         var x,
             curr;
 
+        if (typeof listeners === "undefined") return -1;
+
         for (x = listeners.length - 1; x >= 0; x -= 1) {
             curr = listeners[x];
             if (curr.fn === fn && curr.context === context) {
